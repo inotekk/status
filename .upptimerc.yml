@@ -3,7 +3,7 @@
 # indépendante de la nôtre), incidents ouverts en issues GitHub, page
 # publiée sur GitHub Pages. Docs : https://upptime.js.org/docs/configuration
 owner: inotekk
-repo: statut
+repo: status
 
 # Périmètre CNP-16 : les quatre interfaces publiques de la plateforme.
 sites:
