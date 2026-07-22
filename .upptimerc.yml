@@ -1,31 +1,101 @@
-# Change these first
-owner: upptime # Your GitHub organization or username, where this repository lives
-repo: upptime # The name of this repository
+# Configuration Upptime de la page de statut VIGIAO (statut.vigiao.fr).
+# Sondes toutes les ~5 minutes depuis GitHub Actions (infrastructure
+# indépendante de la nôtre), incidents ouverts en issues GitHub, page
+# publiée sur GitHub Pages. Docs : https://upptime.js.org/docs/configuration
+owner: inotekk
+repo: statut
 
+# Périmètre CNP-16 : les quatre interfaces publiques de la plateforme.
 sites:
-  - name: Google
-    url: https://www.google.com
-  - name: Wikipedia
-    url: https://en.wikipedia.org
-  - name: Hacker News
-    url: https://news.ycombinator.com
-  - name: Test Broken Site
-    url: https://thissitedoesnotexist.koj.co
+  - name: Application VIGIAO
+    url: https://ao.inotekk.com/api/v1/health
+    slug: application-vigiao
+  - name: Veille marchés publics
+    url: https://vigi.inotekk.com/healthz
+    slug: veille-marches-publics
+  - name: Site vigiao.fr
+    url: https://vigiao.fr
+    slug: site-vigiao-fr
+  - name: Espace client
+    url: https://espace.vigiao.fr
+    slug: espace-client
+
+# Chaque incident ouvre une issue assignée : notification e-mail GitHub immédiate.
+assignees:
+  - inotekk
 
 status-website:
-  # Add your custom domain name, or remove the `cname` line if you don't have a domain
-  # Uncomment the `baseUrl` line if you don't have a custom domain and add your repo name there
-  cname: demo.upptime.js.org
-  # baseUrl: /your-repo-name
-  logoUrl: https://raw.githubusercontent.com/upptime/upptime.js.org/master/static/img/icon.svg
-  name: Upptime
-  introTitle: "**Upptime** is the open-source uptime monitor and status page, powered entirely by GitHub."
-  introMessage: This is a sample status page which uses **real-time** data from our [GitHub repository](https://github.com/upptime/upptime). No server required — just GitHub Actions, Issues, and Pages. [**Get your own for free**](https://github.com/upptime/upptime)
+  cname: statut.vigiao.fr
+  name: Statut VIGIAO
+  introTitle: "**Statut VIGIAO** — disponibilité des services en temps réel"
+  introMessage: Page de statut officielle de la plateforme VIGIAO (Inotekk). Les mesures sont effectuées toutes les 5 minutes depuis une infrastructure indépendante de nos serveurs.
   navbar:
-    - title: Status
+    - title: Statut
       href: /
     - title: GitHub
       href: https://github.com/$OWNER/$REPO
 
-# Upptime also supports notifications, assigning issues, and more
-# See https://upptime.js.org/docs/configuration
+# Interface intégralement en français (clés du status-page Upptime).
+i18n:
+  activeIncidents: Incidents en cours
+  allSystemsOperational: Tous les services sont opérationnels
+  incidentReport: "Rapport de l'incident nº $NUMBER →"
+  activeIncidentSummary: Ouvert le $DATE avec $POSTS messages
+  incidentTitle: Détail de l'incident $NUMBER
+  incidentDetails: Détail de l'incident
+  incidentFixed: Résolu
+  incidentOngoing: En cours
+  incidentOpenedAt: Ouvert le
+  incidentClosedAt: Clos le
+  incidentViewOnGitHub: Voir et suivre sur GitHub
+  incidentCommentSummary: Publié le $DATE par $AUTHOR
+  incidentBack: ← Retour à tous les incidents
+  pastIncidents: Incidents passés
+  pastIncidentsResolved: Résolu en $MINUTES minutes avec $POSTS messages
+  liveStatus: Statut en direct
+  overallUptime: "Disponibilité globale : $UPTIME"
+  overallUptimeTitle: Disponibilité globale
+  averageResponseTime: "Temps de réponse moyen : $TIME ms"
+  averageResponseTimeTitle: Temps de réponse moyen
+  # La clé « sevelDay... » reproduit telle quelle une coquille du schéma Upptime.
+  sevelDayResponseTime: Temps de réponse sur 7 jours
+  responseTimeMs: Temps de réponse (ms)
+  up: En ligne
+  down: Hors ligne
+  degraded: Dégradé
+  ms: ms
+  loading: Chargement
+  navGitHub: GitHub
+  footer: Cette page est [open source]($REPO), propulsée par [Upptime](https://upptime.js.org)
+  rateLimitExceededTitle: Limite de requêtes atteinte
+  rateLimitExceededIntro: Vous avez dépassé le nombre de requêtes autorisées par heure. Patientez avant de recharger cette page, ou ajoutez un jeton d'accès personnel GitHub pour continuer.
+  rateLimitExceededWhatDoesErrorMean: Que signifie cette erreur ?
+  rateLimitExceededErrorMeaning: Cette page utilise l'API GitHub pour afficher le statut en temps réel. GitHub autorise 60 requêtes par heure et par adresse IP, et ce quota est épuisé.
+  rateLimitExceededErrorHowCanFix: Comment corriger ?
+  rateLimitExceededErrorFix: Attendez une heure et votre quota sera restauré. Vous pouvez aussi ajouter un jeton d'accès personnel GitHub (5 000 requêtes par heure).
+  rateLimitExceededGeneratePAT: Comment générer un jeton d'accès personnel
+  rateLimitExceededHasSet: Un jeton d'accès personnel est enregistré.
+  rateLimitExceededRemoveToken: Retirer le jeton
+  rateLimitExceededGitHubPAT: Jeton d'accès personnel GitHub
+  rateLimitExceededCopyPastePAT: Collez votre jeton
+  rateLimitExceededSaveToken: Enregistrer le jeton
+  errorTitle: Une erreur est survenue
+  errorIntro: Impossible de récupérer les informations de statut les plus récentes.
+  errorText: Vous pouvez réessayer dans quelques instants.
+  errorHome: Retour à l'accueil
+  pastScheduledMaintenance: Maintenances planifiées passées
+  scheduledMaintenance: Maintenance planifiée
+  scheduledMaintenanceSummaryStarted: Commencée le $DATE pour $DURATION minutes
+  scheduledMaintenanceSummaryStarts: Commence le $DATE pour $DURATION minutes
+  startedAt: Commencée le
+  startsAt: Commence le
+  duration: Durée
+  durationMin: $DURATION minutes
+  incidentCompleted: Terminée
+  incidentScheduled: Planifiée
+  duration24H: 24 h
+  duration7D: 7 j
+  duration30D: 30 j
+  duration1Y: 1 an
+  durationAll: tout
+  locale: fr-FR
