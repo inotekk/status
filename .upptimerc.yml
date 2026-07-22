@@ -1,4 +1,4 @@
-# Configuration Upptime de la page de statut VIGIAO (statut.vigiao.fr).
+# Configuration Upptime de la page de statut VIGIAO (status.vigiao.fr).
 # Sondes toutes les ~5 minutes depuis GitHub Actions (infrastructure
 # indépendante de la nôtre), incidents ouverts en issues GitHub, page
 # publiée sur GitHub Pages. Docs : https://upptime.js.org/docs/configuration
@@ -25,7 +25,7 @@ assignees:
   - inotekk
 
 status-website:
-  cname: statut.vigiao.fr
+  cname: status.vigiao.fr
   name: Statut VIGIAO
   introTitle: "**Statut VIGIAO** — disponibilité des services en temps réel"
   introMessage: Page de statut officielle de la plateforme VIGIAO (Inotekk). Les mesures sont effectuées toutes les 5 minutes depuis une infrastructure indépendante de nos serveurs.
