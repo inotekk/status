@@ -24,7 +24,13 @@ sites:
 assignees:
   - inotekk
 
+# Décalage de la sonde hors des minutes rondes, tout en conservant une cadence de 5 minutes.
+workflowSchedule:
+  uptime: "2-59/5 * * * *"
+
 status-website:
+  # Rafraîchissement des données publiques après un rétablissement.
+  productionCacheTime: 30000
   cname: status.vigiao.fr
   name: Statut VIGIAO
   introTitle: "**Statut VIGIAO** — disponibilité des services en temps réel"
