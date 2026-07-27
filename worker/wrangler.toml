@@ -1,0 +1,13 @@
+# Worker planificateur : déclenche la sonde Upptime (Uptime CI) toutes les
+# 5 minutes via l'API GitHub, à la place du cron GitHub Actions (trop
+# irrégulier aux heures de charge). Le cron GitHub de uptime.yml est réduit
+# à un filet de sécurité quotidien (cf. workflowSchedule dans .upptimerc.yml).
+#
+# Secret requis (wrangler secret put GITHUB_TOKEN) : PAT fine-grained limité
+# au repo inotekk/status avec la permission « Actions : Read and write ».
+name = "vigiao-status-cron"
+main = "index.js"
+compatibility_date = "2026-07-01"
+
+[triggers]
+crons = ["*/5 * * * *"]

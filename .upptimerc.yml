@@ -24,9 +24,12 @@ sites:
 assignees:
   - inotekk
 
-# Décalage de la sonde hors des minutes rondes, tout en conservant une cadence de 5 minutes.
+# Le top départ des sondes vient du Worker Cloudflare (worker/, cron toutes
+# les 5 minutes) car les crons GitHub Actions dérivent trop aux heures de
+# charge. Le cron ci-dessous n'est qu'un filet de sécurité quotidien au cas
+# où le Worker cesserait d'appeler GitHub.
 workflowSchedule:
-  uptime: "2-59/5 * * * *"
+  uptime: "41 4 * * *"
 
 status-website:
   # Rafraîchissement des données publiques après un rétablissement.
