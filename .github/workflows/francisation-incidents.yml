@@ -1,0 +1,96 @@
+# Francisation automatique des incidents Upptime.
+#
+# uptime-monitor (vérifié en v1.43.12) crée les issues d'incident et le
+# commentaire de clôture avec des textes anglais codés en dur, sans clé de
+# configuration. Ce workflow les réécrit en français dès leur création.
+# Il ne modifie que les textes correspondant exactement aux gabarits
+# d'Upptime : tout texte manuel (commentaires de Léo, issues hors sonde)
+# est laissé intact.
+#
+# Prérequis : les issues doivent être créées via le secret GH_PAT (déjà en
+# place) — les événements émis par le GITHUB_TOKEN interne ne déclenchent
+# pas de workflows. Ce fichier ne fait pas partie des gabarits Upptime :
+# l'Update Template CI ne le régénère pas.
+name: Francisation des incidents
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+permissions:
+  issues: write
+jobs:
+  franciser:
+    name: Franciser les textes Upptime
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            // Traduit les durées humaines d'Upptime (« 1 hour, 11 minutes »).
+            const franciserDuree = (s) =>
+              s
+                .replace(/\bdays\b/g, "jours")
+                .replace(/\bday\b/g, "jour")
+                .replace(/\bhours\b/g, "heures")
+                .replace(/\bhour\b/g, "heure")
+                .replace(/\bseconds\b/g, "secondes")
+                .replace(/\bsecond\b/g, "seconde")
+                .replace(/\band\b/g, "et");
+
+            if (context.eventName === "issues") {
+              // Ouverture d'incident : titre « 🛑 X is down » / « ⚠️ X has
+              // degraded performance » et corps « In [`sha`](…), X (url) … ».
+              const issue = context.payload.issue;
+              let titre = issue.title;
+              let corps = issue.body || "";
+
+              let m = titre.match(/^🛑 (.*) is down$/u);
+              if (m) {
+                titre = `🛑 ${m[1]} indisponible`;
+              } else if ((m = titre.match(/^⚠️ (.*) has degraded performance$/u))) {
+                titre = `⚠️ ${m[1]} : performances dégradées`;
+              }
+
+              const bm = corps.match(
+                /^In (\[`[0-9a-f]{7}`\]\([^)]+\)), ([\s\S]*) \((\S+)\) (was \*\*down\*\*|experienced \*\*degraded performance\*\*):\s*\n- HTTP code: (\d+)\s*\n- Response time: (\d+) ms\s*$/,
+              );
+              if (bm) {
+                const etat = bm[4].startsWith("was")
+                  ? "était **hors ligne**"
+                  : "présentait des **performances dégradées**";
+                corps = [
+                  `Dans ${bm[1]}, ${bm[2]} (${bm[3]}) ${etat} :`,
+                  `- Code HTTP : ${bm[5]}`,
+                  `- Temps de réponse : ${bm[6]} ms`,
+                ].join("\n");
+              }
+
+              if (titre !== issue.title || corps !== (issue.body || "")) {
+                await github.rest.issues.update({
+                  ...context.repo,
+                  issue_number: issue.number,
+                  title: titre,
+                  body: corps,
+                });
+              }
+            } else {
+              // Clôture : commentaire « **Resolved:** X is back up in
+              // [`sha`](…) after <durée>. » (variante « performance has
+              // improved » pour les incidents de performance dégradée).
+              const commentaire = context.payload.comment;
+              const m = (commentaire.body || "").match(
+                /^\*\*Resolved:\*\* ([\s\S]*) (is back up|performance has improved) in (\[`[0-9a-f]{7}`\]\([^)]+\)) after ([^.]*)\.\s*$/,
+              );
+              if (m) {
+                const debut =
+                  m[2] === "is back up"
+                    ? `${m[1]} est de nouveau en ligne`
+                    : `les performances de ${m[1]} sont revenues à la normale`;
+                await github.rest.issues.updateComment({
+                  ...context.repo,
+                  comment_id: commentaire.id,
+                  body: `**Résolu :** ${debut} (${m[3]}) après ${franciserDuree(m[4])}.`,
+                });
+              }
+            }
