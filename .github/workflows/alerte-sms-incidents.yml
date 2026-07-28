@@ -1,0 +1,47 @@
+# Alerte SMS sur incident de la sonde Upptime.
+#
+# Sur ouverture/fermeture d'une issue d'incident (label « status », posé par
+# uptime-monitor), transmet l'événement au Worker Cloudflare
+# vigiao-status-cron, qui envoie le SMS via Brevo. La clé Brevo et le numéro
+# destinataire restent en secrets Cloudflare : ce repo public ne détient que
+# le jeton d'appel ALERTE_SMS_HOOK_TOKEN, sans autre pouvoir que de
+# déclencher ce SMS d'alerte.
+#
+# Le filtrage fin (indisponibilité 🛑 seulement, pas les performances
+# dégradées ⚠️) est fait par le Worker. Le garde sur le label « status »
+# empêche les issues externes (repo public) de déclencher des envois : seuls
+# les comptes avec droit d'écriture peuvent créer une issue déjà labellisée.
+#
+# Comme francisation-incidents.yml, ce fichier ne fait pas partie des
+# gabarits Upptime : l'Update Template CI ne le régénère pas. Il ne se
+# déclenche que parce que les issues sont créées via le secret GH_PAT (les
+# événements émis par le GITHUB_TOKEN interne ne déclenchent pas de
+# workflows).
+name: Alerte SMS incident
+on:
+  issues:
+    types: [opened, closed]
+permissions: {}
+jobs:
+  sms:
+    name: Transmettre l'incident au Worker SMS
+    if: contains(github.event.issue.labels.*.name, 'status')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Appeler la passerelle SMS
+        env:
+          JETON: ${{ secrets.ALERTE_SMS_HOOK_TOKEN }}
+          ACTION: ${{ github.event.action }}
+          TITRE: ${{ github.event.issue.title }}
+          URL: ${{ github.event.issue.html_url }}
+        # --fail sans --fail-with-body : ne jamais rejouer le corps d'une
+        # réponse dans ces logs publics. Un échec (Brevo, jeton) fait échouer
+        # le job → e-mail GitHub « workflow run failed » en filet de sécurité.
+        run: |
+          jq -nc --arg action "$ACTION" --arg title "$TITRE" --arg url "$URL" \
+            '{action: $action, title: $title, url: $url}' \
+          | curl -sS --fail --retry 3 --retry-delay 10 --retry-all-errors \
+              -X POST https://vigiao-status-cron.leo-marques.workers.dev \
+              -H "Authorization: Bearer $JETON" \
+              -H "content-type: application/json" \
+              --data @-

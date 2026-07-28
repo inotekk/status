@@ -1,0 +1,2 @@
+# Cache local wrangler (déploiement du Worker) — jamais versionné.
+.wrangler/
