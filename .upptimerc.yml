@@ -4,6 +4,7 @@
 # publiée sur GitHub Pages. Docs : https://upptime.js.org/docs/configuration
 owner: inotekk
 repo: status
+customStatusWebsitePackage: "@upptime/status-page@github:inotekk/status-page#v1.17.0-fr.1"
 
 # Périmètre CNP-16 : les quatre interfaces publiques de la plateforme.
 sites:
@@ -49,8 +50,10 @@ i18n:
   activeIncidents: Incidents en cours
   allSystemsOperational: Tous les services sont opérationnels
   incidentReport: "Rapport de l'incident nº $NUMBER →"
+  maintenanceReport: "Détail de la maintenance n° $NUMBER →"
   activeIncidentSummary: Ouvert le $DATE avec $POSTS messages
   incidentTitle: Détail de l'incident $NUMBER
+  maintenanceTitle: Détail de la maintenance n° $NUMBER
   incidentDetails: Détail de l'incident
   incidentFixed: Résolu
   incidentOngoing: En cours
@@ -58,7 +61,7 @@ i18n:
   incidentClosedAt: Clos le
   incidentViewOnGitHub: Voir et suivre sur GitHub
   incidentCommentSummary: Publié le $DATE par $AUTHOR
-  incidentBack: ← Retour à tous les incidents
+  incidentBack: ← Retour au tableau de bord
   pastIncidents: Incidents passés
   pastIncidentsResolved: Résolu en $MINUTES minutes avec $POSTS messages
   liveStatus: Statut en direct
