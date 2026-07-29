@@ -4,7 +4,7 @@
 # publiée sur GitHub Pages. Docs : https://upptime.js.org/docs/configuration
 owner: inotekk
 repo: status
-customStatusWebsitePackage: "@upptime/status-page@github:inotekk/status-page#v1.17.0-fr.2"
+customStatusWebsitePackage: "@upptime/status-page@github:inotekk/status-page#v1.17.0-fr.3"
 
 # Périmètre CNP-16 : les quatre interfaces publiques de la plateforme.
 sites:
