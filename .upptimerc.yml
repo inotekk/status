@@ -6,7 +6,8 @@ owner: inotekk
 repo: status
 customStatusWebsitePackage: "@upptime/status-page@github:inotekk/status-page#v1.17.0-fr.3"
 
-# Périmètre CNP-16 : les quatre interfaces publiques de la plateforme.
+# Périmètre CNP-16 : les quatre interfaces publiques de la plateforme,
+# complétées par la santé fonctionnelle du provisionnement des accès clients.
 sites:
   - name: Application VIGIAO
     url: https://ao.inotekk.com/api/v1/health
@@ -20,6 +21,15 @@ sites:
   - name: Espace client
     url: https://espace.vigiao.fr
     slug: espace-client
+  # Le endpoint ne publie que des compteurs agrégés. Une réponse 503 signifie
+  # qu'au moins une synchronisation de droits est bloquée et doit donc ouvrir
+  # un incident distinct, même si l'interface Espace client répond encore.
+  - name: Provisionnement des accès clients
+    url: https://espace.vigiao.fr/api/health/ao-provisioning
+    slug: provisionnement-acces-clients
+    expectedStatusCodes:
+      - 200
+    maxResponseTime: 5000
 
 # Chaque incident ouvre une issue assignée : notification e-mail GitHub immédiate.
 assignees:

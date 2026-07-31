@@ -1,0 +1,37 @@
+# Vérifie les invariants des sondes ajoutées à la configuration Upptime.
+# Ce workflow est maintenu à la main et n'est pas généré par Upptime.
+name: Monitoring configuration CI
+
+on:
+  pull_request:
+    paths:
+      - .upptimerc.yml
+      - package.json
+      - tests/**
+      - .github/workflows/monitoring-config.yml
+  push:
+    branches:
+      - master
+    paths:
+      - .upptimerc.yml
+      - package.json
+      - tests/**
+      - .github/workflows/monitoring-config.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Validate monitoring contracts
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+      - name: Setup Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: "22"
+      - name: Run configuration tests
+        run: npm test
