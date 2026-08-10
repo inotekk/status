@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 624,
-    "timeDay": 740,
-    "timeWeek": 742,
-    "timeMonth": 624,
-    "timeYear": 624,
+    "time": 618,
+    "timeDay": 444,
+    "timeWeek": 705,
+    "timeMonth": 618,
+    "timeYear": 618,
     "dailyMinutesDown": {}
   },
   {
@@ -22,18 +22,20 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 1216,
-    "timeDay": 1479,
+    "timeDay": 0,
     "timeWeek": 1131,
     "timeMonth": 1216,
     "timeYear": 1216,
-    "dailyMinutesDown": {}
+    "dailyMinutesDown": {
+      "2026-08-10": 0
+    }
   },
   {
     "name": "Site vigiao.fr",
@@ -46,11 +48,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 899,
-    "timeDay": 675,
-    "timeWeek": 636,
-    "timeMonth": 899,
-    "timeYear": 899,
+    "time": 885,
+    "timeDay": 468,
+    "timeWeek": 615,
+    "timeMonth": 885,
+    "timeYear": 885,
     "dailyMinutesDown": {}
   },
   {
@@ -64,11 +66,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 471,
-    "timeDay": 478,
-    "timeWeek": 478,
-    "timeMonth": 471,
-    "timeYear": 471,
+    "time": 466,
+    "timeDay": 322,
+    "timeWeek": 458,
+    "timeMonth": 466,
+    "timeYear": 466,
     "dailyMinutesDown": {}
   },
   {
@@ -82,11 +84,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 428,
-    "timeDay": 451,
-    "timeWeek": 455,
-    "timeMonth": 428,
-    "timeYear": 428,
+    "time": 424,
+    "timeDay": 386,
+    "timeWeek": 447,
+    "timeMonth": 424,
+    "timeYear": 424,
     "dailyMinutesDown": {}
   }
 ]
