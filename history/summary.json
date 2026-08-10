@@ -22,19 +22,19 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "99.99%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 1216,
-    "timeDay": 0,
-    "timeWeek": 1131,
-    "timeMonth": 1216,
-    "timeYear": 1216,
+    "status": "up",
+    "uptime": "99.96%",
+    "uptimeDay": "99.24%",
+    "uptimeWeek": "99.89%",
+    "uptimeMonth": "99.96%",
+    "uptimeYear": "99.96%",
+    "time": 1318,
+    "timeDay": 4564,
+    "timeWeek": 1561,
+    "timeMonth": 1318,
+    "timeYear": 1318,
     "dailyMinutesDown": {
-      "2026-08-10": 0
+      "2026-08-10": 11
     }
   },
   {
