@@ -12,7 +12,7 @@
     "uptimeYear": "100.00%",
     "time": 618,
     "timeDay": 444,
-    "timeWeek": 705,
+    "timeWeek": 712,
     "timeMonth": 618,
     "timeYear": 618,
     "dailyMinutesDown": {}
@@ -23,19 +23,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
     "status": "up",
-    "uptime": "99.96%",
-    "uptimeDay": "99.24%",
-    "uptimeWeek": "99.89%",
-    "uptimeMonth": "99.96%",
-    "uptimeYear": "99.96%",
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
     "time": 1318,
     "timeDay": 4564,
-    "timeWeek": 1561,
+    "timeWeek": 1639,
     "timeMonth": 1318,
     "timeYear": 1318,
-    "dailyMinutesDown": {
-      "2026-08-10": 11
-    }
+    "dailyMinutesDown": {}
   },
   {
     "name": "Site vigiao.fr",
@@ -50,7 +48,7 @@
     "uptimeYear": "100.00%",
     "time": 885,
     "timeDay": 468,
-    "timeWeek": 615,
+    "timeWeek": 637,
     "timeMonth": 885,
     "timeYear": 885,
     "dailyMinutesDown": {}
@@ -68,7 +66,7 @@
     "uptimeYear": "100.00%",
     "time": 466,
     "timeDay": 322,
-    "timeWeek": 458,
+    "timeWeek": 473,
     "timeMonth": 466,
     "timeYear": 466,
     "dailyMinutesDown": {}
@@ -86,7 +84,7 @@
     "uptimeYear": "100.00%",
     "time": 424,
     "timeDay": 386,
-    "timeWeek": 447,
+    "timeWeek": 466,
     "timeMonth": 424,
     "timeYear": 424,
     "dailyMinutesDown": {}
