@@ -22,18 +22,20 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 1151,
-    "timeDay": 349,
-    "timeWeek": 544,
-    "timeMonth": 1151,
-    "timeYear": 1151,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.99%",
+    "uptimeDay": "99.67%",
+    "uptimeWeek": "99.95%",
+    "uptimeMonth": "99.99%",
+    "uptimeYear": "99.99%",
+    "time": 1138,
+    "timeDay": 475,
+    "timeWeek": 551,
+    "timeMonth": 1138,
+    "timeYear": 1138,
+    "dailyMinutesDown": {
+      "2026-08-20": 5
+    }
   },
   {
     "name": "Site vigiao.fr",
