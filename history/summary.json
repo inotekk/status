@@ -22,7 +22,7 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
