@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 635,
-    "timeDay": 484,
-    "timeWeek": 714,
-    "timeMonth": 635,
-    "timeYear": 635,
+    "time": 630,
+    "timeDay": 432,
+    "timeWeek": 655,
+    "timeMonth": 630,
+    "timeYear": 630,
     "dailyMinutesDown": {}
   },
   {
@@ -23,19 +23,17 @@
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
     "status": "up",
-    "uptime": "99.99%",
-    "uptimeDay": "99.67%",
-    "uptimeWeek": "99.95%",
-    "uptimeMonth": "99.99%",
-    "uptimeYear": "99.99%",
-    "time": 1138,
-    "timeDay": 475,
-    "timeWeek": 551,
-    "timeMonth": 1138,
-    "timeYear": 1138,
-    "dailyMinutesDown": {
-      "2026-08-20": 5
-    }
+    "uptime": "100.00%",
+    "uptimeDay": "100.00%",
+    "uptimeWeek": "100.00%",
+    "uptimeMonth": "100.00%",
+    "uptimeYear": "100.00%",
+    "time": 1121,
+    "timeDay": 487,
+    "timeWeek": 519,
+    "timeMonth": 1121,
+    "timeYear": 1121,
+    "dailyMinutesDown": {}
   },
   {
     "name": "Site vigiao.fr",
@@ -48,11 +46,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 820,
-    "timeDay": 451,
-    "timeWeek": 622,
-    "timeMonth": 820,
-    "timeYear": 820,
+    "time": 811,
+    "timeDay": 424,
+    "timeWeek": 594,
+    "timeMonth": 811,
+    "timeYear": 811,
     "dailyMinutesDown": {}
   },
   {
@@ -66,11 +64,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 471,
-    "timeDay": 361,
-    "timeWeek": 497,
-    "timeMonth": 471,
-    "timeYear": 471,
+    "time": 468,
+    "timeDay": 344,
+    "timeWeek": 479,
+    "timeMonth": 468,
+    "timeYear": 468,
     "dailyMinutesDown": {}
   },
   {
@@ -84,11 +82,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 441,
-    "timeDay": 295,
-    "timeWeek": 481,
-    "timeMonth": 441,
-    "timeYear": 441,
+    "time": 437,
+    "timeDay": 350,
+    "timeWeek": 464,
+    "timeMonth": 437,
+    "timeYear": 437,
     "dailyMinutesDown": {}
   }
 ]
