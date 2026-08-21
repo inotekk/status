@@ -3,12 +3,12 @@
 ## Objectif
 
 La sonde `Provisionnement des accès clients` complète la disponibilité HTTP de
-l'Espace client. Elle détecte le cas où l'interface reste accessible alors
+la gestion de la veille. Elle détecte le cas où l'interface reste accessible alors
 qu'une synchronisation de droits Veille/Réponse ne peut plus aboutir.
 
 Upptime interroge toutes les cinq minutes :
 
-`GET https://espace.vigiao.fr/api/health/ao-provisioning`
+`GET https://veille.vigiao.fr/api/health/ao-provisioning`
 
 Le endpoint Scribe expose uniquement un état et des compteurs agrégés :
 
@@ -20,7 +20,7 @@ Le endpoint Scribe expose uniquement un état et des compteurs agrégés :
 La sonde n'envoie ni secret, ni paramètre, ni corps de requête. Upptime conserve
 le code HTTP et le temps de réponse, pas le corps JSON. Une réponse `503` ouvre
 donc un incident propre au service `Provisionnement des accès clients`. Elle ne
-fait pas passer artificiellement l'ensemble de l'Espace client pour
+fait pas passer artificiellement l'ensemble de la gestion de veille pour
 indisponible, tout en rendant l'anomalie visible sur `status.vigiao.fr` et dans
 les notifications GitHub.
 

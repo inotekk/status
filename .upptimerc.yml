@@ -18,14 +18,14 @@ sites:
   - name: Site vigiao.fr
     url: https://vigiao.fr
     slug: site-vigiao-fr
-  - name: Espace client
-    url: https://espace.vigiao.fr
+  - name: Ma veille
+    url: https://veille.vigiao.fr
     slug: espace-client
   # Le endpoint ne publie que des compteurs agrégés. Une réponse 503 signifie
   # qu'au moins une synchronisation de droits est bloquée et doit donc ouvrir
-  # un incident distinct, même si l'interface Espace client répond encore.
+  # un incident distinct, même si l'interface Ma veille répond encore.
   - name: Provisionnement des accès clients
-    url: https://espace.vigiao.fr/api/health/ao-provisioning
+    url: https://veille.vigiao.fr/api/health/ao-provisioning
     slug: provisionnement-acces-clients
     expectedStatusCodes:
       - 200

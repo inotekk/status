@@ -51,7 +51,7 @@ test("la santé du provisionnement AO est une sonde Upptime explicite", async ()
   assert.equal(sondes.length, 1, "la sonde doit être déclarée exactement une fois");
   assert.deepEqual(sondes[0], {
     name: "Provisionnement des accès clients",
-    url: "https://espace.vigiao.fr/api/health/ao-provisioning",
+    url: "https://veille.vigiao.fr/api/health/ao-provisioning",
     slug: "provisionnement-acces-clients",
     expectedStatusCodes: ["200"],
     maxResponseTime: "5000",
