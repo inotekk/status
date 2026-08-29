@@ -125,15 +125,13 @@ i18n:
   duration1Y: 1 an
   durationAll: tout
   locale: fr-FR
-  # Textes des issues d'incident — clés lues par le fork inotekk/uptime-monitor
-  # (cf. FORK.md du fork) ; variables : $SITE_NAME, $SITE_URL, $COMMIT_LINK,
-  # $HTTP_CODE, $RESPONSE_TIME, $DURATION.
+  # Textes publics des incidents : rester brefs, non techniques et centrés utilisateur.
   issueTitleDown: "🛑 $SITE_NAME indisponible"
   issueTitleDegraded: "⚠️ $SITE_NAME : performances dégradées"
-  issueBodyDown: "Dans $COMMIT_LINK, $SITE_NAME ($SITE_URL) était **hors ligne** :\n- Code HTTP : $HTTP_CODE\n- Temps de réponse : $RESPONSE_TIME ms\n"
-  issueBodyDegraded: "Dans $COMMIT_LINK, $SITE_NAME ($SITE_URL) présentait des **performances dégradées** :\n- Code HTTP : $HTTP_CODE\n- Temps de réponse : $RESPONSE_TIME ms\n"
-  issueResolvedDown: "**Résolu :** $SITE_NAME est de nouveau en ligne ($COMMIT_LINK) après $DURATION."
-  issueResolvedDegraded: "**Résolu :** les performances de $SITE_NAME sont revenues à la normale ($COMMIT_LINK) après $DURATION."
+  issueBodyDown: "$SITE_NAME est temporairement indisponible. Nous suivons son rétablissement."
+  issueBodyDegraded: "$SITE_NAME répond plus lentement que prévu. Nous suivons la situation."
+  issueResolvedDown: "**Résolu :** $SITE_NAME est de nouveau disponible."
+  issueResolvedDegraded: "**Résolu :** les performances de $SITE_NAME sont revenues à la normale."
   durationDay: jour
   durationDays: jours
   durationHour: heure
