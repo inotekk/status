@@ -13,7 +13,7 @@
     "time": 633,
     "timeDay": 797,
     "timeWeek": 688,
-    "timeMonth": 638,
+    "timeMonth": 643,
     "timeYear": 633,
     "dailyMinutesDown": {}
   },
@@ -22,18 +22,21 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "down",
-    "uptime": "100.00%",
-    "uptimeDay": "100.00%",
-    "uptimeWeek": "100.00%",
-    "uptimeMonth": "100.00%",
-    "uptimeYear": "100.00%",
-    "time": 1031,
-    "timeDay": 637,
-    "timeWeek": 588,
-    "timeMonth": 901,
-    "timeYear": 1031,
-    "dailyMinutesDown": {}
+    "status": "up",
+    "uptime": "99.93%",
+    "uptimeDay": "97.33%",
+    "uptimeWeek": "99.62%",
+    "uptimeMonth": "99.91%",
+    "uptimeYear": "99.93%",
+    "time": 1020,
+    "timeDay": 553,
+    "timeWeek": 571,
+    "timeMonth": 880,
+    "timeYear": 1020,
+    "dailyMinutesDown": {
+      "2026-08-29": 23,
+      "2026-08-28": 15
+    }
   },
   {
     "name": "Site vigiao.fr",
@@ -49,7 +52,7 @@
     "time": 766,
     "timeDay": 596,
     "timeWeek": 583,
-    "timeMonth": 557,
+    "timeMonth": 563,
     "timeYear": 766,
     "dailyMinutesDown": {}
   },
@@ -67,7 +70,7 @@
     "time": 462,
     "timeDay": 457,
     "timeWeek": 442,
-    "timeMonth": 440,
+    "timeMonth": 444,
     "timeYear": 462,
     "dailyMinutesDown": {}
   },
