@@ -39,7 +39,7 @@ jobs:
         with:
           node-version: "20"
       - name: Generate graphs
-        uses: inotekk/uptime-monitor@v1.43.12-fr.5
+        uses: inotekk/uptime-monitor@v1.43.12-fr.6
         with:
           command: "graphs"
         env:
