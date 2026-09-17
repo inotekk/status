@@ -76,17 +76,17 @@
     "url": "https://veille.vigiao.fr/api/health/ao-provisioning",
     "icon": "https://icons.duckduckgo.com/ip3/veille.vigiao.fr.ico",
     "slug": "provisionnement-acces-clients",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
     "uptimeDay": "100.00%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 430,
-    "timeDay": 484,
-    "timeWeek": 448,
-    "timeMonth": 426,
-    "timeYear": 430,
+    "time": 431,
+    "timeDay": 477,
+    "timeWeek": 451,
+    "timeMonth": 427,
+    "timeYear": 431,
     "dailyMinutesDown": {}
   }
 ]
