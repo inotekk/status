@@ -10,11 +10,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 759,
-    "timeDay": 797,
-    "timeWeek": 589,
-    "timeMonth": 966,
-    "timeYear": 759,
+    "time": 757,
+    "timeDay": 537,
+    "timeWeek": 595,
+    "timeMonth": 960,
+    "timeYear": 757,
     "dailyMinutesDown": {}
   },
   {
@@ -22,20 +22,21 @@
     "url": "https://vigi.inotekk.com/healthz",
     "icon": "https://icons.duckduckgo.com/ip3/vigi.inotekk.com.ico",
     "slug": "veille-marches-publics",
-    "status": "up",
+    "status": "down",
     "uptime": "99.97%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "99.97%",
-    "time": 778,
-    "timeDay": 426,
-    "timeWeek": 401,
-    "timeMonth": 464,
-    "timeYear": 778,
+    "time": 775,
+    "timeDay": 404,
+    "timeWeek": 412,
+    "timeMonth": 463,
+    "timeYear": 775,
     "dailyMinutesDown": {
       "2026-08-29": 23,
-      "2026-08-28": 15
+      "2026-08-28": 15,
+      "2026-10-15": 0
     }
   },
   {
@@ -49,11 +50,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 657,
-    "timeDay": 526,
-    "timeWeek": 484,
-    "timeMonth": 532,
-    "timeYear": 657,
+    "time": 656,
+    "timeDay": 550,
+    "timeWeek": 496,
+    "timeMonth": 533,
+    "timeYear": 656,
     "dailyMinutesDown": {}
   },
   {
@@ -68,8 +69,8 @@
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
     "time": 441,
-    "timeDay": 494,
-    "timeWeek": 400,
+    "timeDay": 431,
+    "timeWeek": 408,
     "timeMonth": 419,
     "timeYear": 441,
     "dailyMinutesDown": {}
@@ -85,11 +86,11 @@
     "uptimeWeek": "100.00%",
     "uptimeMonth": "99.93%",
     "uptimeYear": "99.97%",
-    "time": 419,
-    "timeDay": 459,
-    "timeWeek": 388,
-    "timeMonth": 406,
-    "timeYear": 419,
+    "time": 418,
+    "timeDay": 311,
+    "timeWeek": 390,
+    "timeMonth": 403,
+    "timeYear": 418,
     "dailyMinutesDown": {
       "2026-09-17": 30
     }
