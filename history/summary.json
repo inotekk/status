@@ -4,18 +4,20 @@
     "url": "https://ao.inotekk.com/api/v1/health",
     "icon": "https://icons.duckduckgo.com/ip3/ao.inotekk.com.ico",
     "slug": "application-vigiao",
-    "status": "up",
+    "status": "down",
     "uptime": "100.00%",
-    "uptimeDay": "100.00%",
+    "uptimeDay": "99.99%",
     "uptimeWeek": "100.00%",
     "uptimeMonth": "100.00%",
     "uptimeYear": "100.00%",
-    "time": 710,
-    "timeDay": 413,
-    "timeWeek": 587,
-    "timeMonth": 581,
-    "timeYear": 710,
-    "dailyMinutesDown": {}
+    "time": 707,
+    "timeDay": 369,
+    "timeWeek": 554,
+    "timeMonth": 573,
+    "timeYear": 707,
+    "dailyMinutesDown": {
+      "2026-11-18": 0
+    }
   },
   {
     "name": "Veille marchés publics",
